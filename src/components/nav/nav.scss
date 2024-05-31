@@ -1,0 +1,39 @@
+//! variables
+$nav-bg: gray;
+$nav-co: white;
+$nav-fs: 2vw;
+
+@mixin flex {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+#Nav{
+  background-color: $nav-bg;
+  font-size: $nav-fs;
+  padding: 0.5rem 2rem;
+  ul{
+      @include flex();
+      list-style-type: none;
+      li{
+          text-transform: capitalize;
+          font-weight: bold;
+          padding: 0.5rem 1rem;
+
+          border-radius: 8px;
+          box-shadow: 4px 4px 10px rgb(0, 0, 0,0.3);
+          a{
+                color: $nav-co;
+                text-decoration: none;
+                border: none;
+        
+            }
+            &:hover{
+                background-color: brown;
+                transition: 0.2s ease-in;
+            }
+        }
+
+    }
+}
